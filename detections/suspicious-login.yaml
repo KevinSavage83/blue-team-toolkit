@@ -1,0 +1,23 @@
+title: Suspicious Login Activity
+description: Detects potentially malicious authentication activity based on abnormal login behavior.
+status: experimental
+author: Kevin Kern
+logsource:
+  category: authentication
+  product: windows
+detection:
+  selection:
+    EventID:
+      - 4625
+      - 4624
+  condition:
+    selection
+falsepositives:
+  - Legitimate password resets
+  - New device or VPN usage
+  - Administrative testing
+level: medium
+tags:
+  - attack.initial_access
+  - attack.t1078
+  - soc
