@@ -1,0 +1,19 @@
+title: Excessive AD Group Membership Changes
+description: Detects abnormal volume of Active Directory group membership changes.
+status: experimental
+author: Kevin Kern
+logsource:
+  category: iam
+  product: windows
+detection:
+  selection:
+    EventID:
+      - 4728
+      - 4732
+  condition: selection
+falsepositives:
+  - Bulk access provisioning
+level: medium
+tags:
+  - attack.t1098
+  - iam

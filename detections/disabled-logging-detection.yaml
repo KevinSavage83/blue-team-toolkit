@@ -1,0 +1,16 @@
+title: Security Logging Disabled
+description: Detects attempts to disable Windows security logging.
+status: experimental
+author: Kevin Kern
+logsource:
+  category: system
+  product: windows
+detection:
+  selection:
+    EventID: 1102
+  condition: selection
+falsepositives:
+  - Authorized administrative actions
+level: high
+tags:
+  - attack.t1562.002

@@ -1,0 +1,17 @@
+title: Multiple Endpoint Isolation Events
+description: Detects repeated endpoint isolation actions which may indicate active compromise.
+status: experimental
+author: Kevin Kern
+logsource:
+  category: endpoint
+  product: edr
+detection:
+  selection:
+    Action: IsolateEndpoint
+  condition: selection
+falsepositives:
+  - Incident response testing
+level: high
+tags:
+  - attack.t1486
+  - edr

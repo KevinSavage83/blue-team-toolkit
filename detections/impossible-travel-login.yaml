@@ -1,0 +1,18 @@
+title: Impossible Travel Login
+description: Detects user logins from geographically distant locations within an unrealistic time window.
+status: experimental
+author: Kevin Kern
+logsource:
+  category: authentication
+  product: cloud
+detection:
+  selection:
+    LoginResult: Success
+  condition: selection
+falsepositives:
+  - VPN usage
+  - Mobile users
+level: medium
+tags:
+  - attack.t1078
+  - authentication
