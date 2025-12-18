@@ -1,4 +1,3 @@
-Get-Process |
-Where-Object { $_.CPU -gt 300 } |
-Select Name, Id, CPU |
-Sort-Object CPU -Descending
+# Identify high CPU processes
+Get-Process | Where CPU -gt 300 |
+Sort CPU -Descending | Select Name, Id, CPU

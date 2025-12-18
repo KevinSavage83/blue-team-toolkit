@@ -1,3 +1,2 @@
-Get-HotFix |
-Sort-Object InstalledOn -Descending |
-Select -First 10
+# Check recent Windows patches
+Get-HotFix | Sort InstalledOn -Descending | Select -First 20

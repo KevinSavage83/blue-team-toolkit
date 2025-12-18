@@ -1,2 +1,3 @@
+# Check Microsoft Defender status
 Get-MpComputerStatus |
-Select AMServiceEnabled, AntivirusEnabled, RealTimeProtectionEnabled
+Select AntivirusEnabled, RealTimeProtectionEnabled, AMServiceEnabled
